@@ -219,13 +219,103 @@ const Idafacul = {
 Idafacul.rua("Miguel Rosa")
 
 
-//criando uma classe com uma propiedade:
-class Carro{
+// Criando uma classe com uma proppiedade dentro:
+
+class Celular{
     modelo
 }
-const siena = new Carro() // Objeto chamado de instância da classe.
- siena.modelo = "siena"   // Adicionando valor a propiedade da classe através do objeto(instância) que foi criado.
-siena.modelo    
+//criando um objeto para a classe, esse objeto é chamado de "instância" da classe:
+const MeuCelular = new Celular()
+//Adicionado valor a propiedade "modelo" através do objeto que foi criado:
+MeuCelular.modelo = "Multilaser"
+//Criando uma classe e atribuindo dois valores diferentes a ela:
+class Mães {
+    nome
+    idade
+}
+const MinhaMãe = new Mães()
+MinhaMãe.nome = "acleucia"
+ MinhaMãe.idade = "40 anos"
+ const MãeDoMeuAmigo = new Mães()
+ MãeDoMeuAmigo.nome = "Luciana"
+ MãeDoMeuAmigo.idade = "35 anos"
+ //riando uma classe com método:
+ class ValoresMatematicos{
+    valor(){
+        return "O valor de P.i é 3,14."
+    }
+ }
+//invocando o método "valor":
+const pi = new ValoresMatematicos()
+pi.valor()
+//criando uma classe com 3 métodos:
+class Infos{
+    nome(){
+        return "luis felipe"
+    }
+    idade(){
+        return "19 anos"
+    }
+    curso(){
+        return "sistemas de informação"
+    }
+}
+//Chamando os métodos:
+const Me = new Infos()
+Me.nome(); Me.idade(); Me.curso() 
+//utilizando o método "constructor()" em uma classe:
+class Pessoa{
+    constructor(nome){
+        this.nome = nome
+    }
+    Valor(){
+        return "meu nome é " + this.nome + "."
+    }
+}
+//Criando objeto de instâcia para adicionar valor ao parâmetro nome:
+const Eu = new Pessoa("luis felipe")
+// criando uma classe e passando três propiedades através do método Constructor():
+class moto{ 
+    constructor(cor, ano, modelo){
+        this.modelo = modelo
+        this.ano = ano
+        this.cor = cor
+    }
+    conjunto(){
+        return "eu tenho uma moto " + this.cor + " do ano " + this.ano + " e o modelo dela é " + this.modelo + "."
+    }
+}
+const minhamoto = new moto("preta", 2011, "fan")
+//definindo o valor das propiedades no método constructor():
+class moto2{ 
+    constructor(cor, ano, modelo){
+        this.modelo = modelo = "fan"
+        this.ano = ano = 2011
+        this.cor = cor = "preta"
+    }
+    conjunto(){
+        return "eu tenho uma moto " + this.cor + " do ano " + this.ano + " e o modelo dela é " + this.modelo + "."
+    }
+}
+const minhamoto2 = new moto2()
+console.log(minhamoto2.conjunto())
+// executando um método na classe, sem um objeto, usando "static":
+class Person{
+    static nome(){
+        return "meu nome é luis"
+    }
+}
+// Chamando a classe diretamente:
+console.log(Person.nome())
+//passando parâmetros em um método do tipo "static":   //Usar esse método é util, pois não nescessita um constructor e nem um objeto de intância
+class Note{
+    static meunote(marca,ram,processador){
+        this.marca = marca = "Sansumg"
+        this.ram = ram = "4gb de ram"
+        this.processador = processador = "intel core I5"
+        return " meu note é da marca " + this.marca + ", tem " + this.ram + " e o processador " + this.processador 
+    }
+}
 
 
 

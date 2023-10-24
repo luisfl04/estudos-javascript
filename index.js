@@ -316,7 +316,47 @@ class Note{
         return " meu note é da marca " + this.marca + ", tem " + this.ram + " e o processador " + this.processador 
     }
 }
+ 
 
+// criando classes com herança:
+
+class mensagem{
+    texto(){
+        return "Ronaldinho é o melhor de todos os tempos."
+    }
+}
+//classe com herança:
+class mensagem2 extends mensagem{} //os métodos de "mensagem" podem ser chamados em "mensagem2".
+//referênciando a classe pai com "super()" :
+class engenheiro{
+    Iam(){
+        return "i am softwere enginer"
+    }
+}
+class program extends engenheiro{
+    Iam(){
+        return super.Iam() + " and developer progam" 
+    }
+} // recebeu o método da prmeira classe e adicionou infos com o "super"
+
+
+//callbacks:
+
+// Usando "setTimeout()":
+setTimeout( () => {
+    return "estou dentro da função e vou ser execultado após 2,5 segundos"
+},2500)
+//criando uma função com callback:
+const IreiFazer = soma => {
+    n1 = 10
+    n2 = 20
+    const resultado = n1 + n2
+    soma(resultado)
+}
+
+IreiFazer(resultado => {
+    console.log(resultado)
+})
 
 
 

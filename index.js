@@ -342,21 +342,193 @@ class program extends engenheiro{
 
 //callbacks:
 
-// Usando "setTimeout()":
+// Usando a função "setTimeout()", que aceita uma função e o número de milissegundos que devem passar para ela ser execultada.
 setTimeout( () => {
-    return "estou dentro da função e vou ser execultado após 2,5 segundos"
-},2500)
-//criando uma função com callback:
-const IreiFazer = soma => {
-    n1 = 10
-    n2 = 20
-    const resultado = n1 + n2
-    soma(resultado)
+    return "essa função será execultada após 3 segundos"
+}, 3000)
+// a função abaixo será execultada primeiro que a de cima.
+setTimeout( () =>{
+ return "essa função será execultada em 1 segundo."
+},1000)
+// Criando uma função com o parâmetro callback(que também é uma função.)
+const minhacaneta = (callback) => {
+    marca = "bic"
+    tinta = "azul"
+    caneta = marca + tinta
+    callback(caneta) // chamando o param callback e passando o valor de "caneta" a ele.
 }
+// agora, criando uma função settimeout(), onde "caneta" agora é meu parãmetro callback e "minha caneta", o setimeout:
+minhacaneta(caneta => {
+    console.log(caneta)
+}, 3000)
+// A função acima é igual a essa:
+setTimeout( () => {
+    return "essa função será execultada após 3 segundos"
+}, 3000)
+//Criando uma função "setTimeout" que soma dois números e será execultada após 5 segundos:
+//primeira função:
+soma = (callback) => {
+    n1 = 10
+    n2 = 7
+    resultado = n1 + n2
+    callback(resultado)
+}
+//função settimeout:
+soma(resultado => {
+    console.log(resultado)
+},5000)
 
-IreiFazer(resultado => {
+
+// Promises:
+// Maneira diferente de lidar com callbacks. Como vimos anteriormente, com callbacks teriamos a função assim:
+fazeralgo(resultado => {
     console.log(resultado)
 })
+//já com o promises, a função fica assim:
+fazeralgo()
+.then(resultado => {
+    console.log(resultado)
+})
+// usando ".catch" para detectar erros:
+fazeralgo()
+.then(resultado => {
+    console.log(resultado)
+})
+.catch(erro => {
+    console.log(erro)
+})
+// para usar essa sintaxe "promises" deve-se usar a "API promises". Então a função é declarada com um objeto "promise". Assim:
+fazeralgo = new Promise()
+// E a função é declarada dentro dos parênteses de promises. assim:
+fazeralgo = new Promise( () => {
+
+} )
+// A função dentro dos parênteses de promise recebe dois parâmetros, que são: resolve e reject. 
+// Resolve tem a função de resolver a promise, que significa "completa-la" com suscesso. Isso resulta na chamada do método ".then".
+//  já o reject tem a função de encerrar a promise com um erro. Resultando na chamada do método ".catch"
+//  A sintaxe fica assim:
+fazeralgo = new Promise(
+    (resolve, reject) => {
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

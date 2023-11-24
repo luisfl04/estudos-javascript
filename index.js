@@ -409,9 +409,35 @@ fazeralgo = new Promise( () => {
 //  A sintaxe fica assim:
 fazeralgo = new Promise(
     (resolve, reject) => {
+        n1 = 10
+        n2 = 10
+        const sucesso = n1 + n2
+        if(sucesso){
+            resolve("OK")
+        }else {
+            reject("Um erro ocorreu")
+        }
+}
+)
 
-})
 
+// Async e Await:
+
+// função assicrona que retorna uma promisse:
+
+const obterDados = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => 
+        resolve ("dados"), 2000)
+    })
+}
+// chamando a função assícrona com "await":
+const exemplo = await obterDados()
+// utilizando "await" dentro de "async":
+const exemplo2 = async () => {
+    const dados = await obterDados()
+    console.log(dados)
+} 
 
 
 

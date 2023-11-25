@@ -123,7 +123,7 @@ const MyFunction = () => {
 }
 
 
-//Declarando Objeto com "new" e passando valores aos objetos por referêcia através de uma função:
+//Declarando Objeto com "new" e passando valores aos objetos por referêcia através de parâmetro:
 
 //Declarando valores:
 function DeclarandoValores(carro, marca){
